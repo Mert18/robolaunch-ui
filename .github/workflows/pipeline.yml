@@ -20,4 +20,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: robolaunchio/robolaunch-ui:v${{ github.run_number }}, robolaunchio/launch-server:latest
+          tags: robolaunchio/robolaunch-ui:v${{ github.run_number }}, robolaunchio/robolaunch-ui:latest

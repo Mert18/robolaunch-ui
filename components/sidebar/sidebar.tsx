@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { Header, Icon, Image, Menu, Segment, Sidebar } from "semantic-ui-react";
 
@@ -13,14 +14,19 @@ const Drawer: React.FC = ({ children }) => {
         width="thin"
       >
         <Header as="h2">robolaunch</Header>
-        <Menu.Item as="a">
-          <Icon name="home" />
-          Home
-        </Menu.Item>
-        <Menu.Item as="a">
-          <Icon name="gamepad" />
-          Launches
-        </Menu.Item>
+        <Link href="/">
+          <Menu.Item as="a">
+            <Icon name="home" />
+            Home
+          </Menu.Item>
+        </Link>
+        <Link href="/protected">
+          <Menu.Item as="a">
+            <Icon name="gamepad" />
+            Launches
+          </Menu.Item>
+        </Link>
+
         <Menu.Item as="a">
           <Icon name="camera" />
           Readme

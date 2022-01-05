@@ -20,7 +20,7 @@ const Drawer: React.FC = ({ children }) => {
             Home
           </Menu.Item>
         </Link>
-        <Link href="/protected">
+        <Link href="/launches">
           <Menu.Item as="a">
             <Icon name="gamepad" />
             Launches

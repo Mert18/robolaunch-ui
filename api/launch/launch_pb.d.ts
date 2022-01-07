@@ -122,21 +122,49 @@ export namespace LaunchState {
   }
 }
 
-export class LaunchList extends jspb.Message {
-  getUsername(): string;
-  setUsername(value: string): LaunchList;
-
+export class LaunchView extends jspb.Message {
   getName(): string;
-  setName(value: string): LaunchList;
+  setName(value: string): LaunchView;
 
   getNamespace(): string;
-  setNamespace(value: string): LaunchList;
+  setNamespace(value: string): LaunchView;
 
   getLaunchType(): string;
-  setLaunchType(value: string): LaunchList;
+  setLaunchType(value: string): LaunchView;
 
   getWorkloadStatus(): string;
-  setWorkloadStatus(value: string): LaunchList;
+  setWorkloadStatus(value: string): LaunchView;
+
+  getWorkflowId(): string;
+  setWorkflowId(value: string): LaunchView;
+
+  getRunId(): string;
+  setRunId(value: string): LaunchView;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): LaunchView.AsObject;
+  static toObject(includeInstance: boolean, msg: LaunchView): LaunchView.AsObject;
+  static serializeBinaryToWriter(message: LaunchView, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): LaunchView;
+  static deserializeBinaryFromReader(message: LaunchView, reader: jspb.BinaryReader): LaunchView;
+}
+
+export namespace LaunchView {
+  export type AsObject = {
+    name: string,
+    namespace: string,
+    launchType: string,
+    workloadStatus: string,
+    workflowId: string,
+    runId: string,
+  }
+}
+
+export class LaunchList extends jspb.Message {
+  getLaunchesList(): Array<LaunchView>;
+  setLaunchesList(value: Array<LaunchView>): LaunchList;
+  clearLaunchesList(): LaunchList;
+  addLaunches(value?: LaunchView, index?: number): LaunchView;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): LaunchList.AsObject;
@@ -148,11 +176,7 @@ export class LaunchList extends jspb.Message {
 
 export namespace LaunchList {
   export type AsObject = {
-    username: string,
-    name: string,
-    namespace: string,
-    launchType: string,
-    workloadStatus: string,
+    launchesList: Array<LaunchView.AsObject>,
   }
 }
 

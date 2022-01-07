@@ -12,6 +12,7 @@ goog.provide('proto.launch.LaunchList');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
 goog.require('jspb.Message');
+goog.require('proto.launch.LaunchView');
 
 
 /**
@@ -25,12 +26,19 @@ goog.require('jspb.Message');
  * @constructor
  */
 proto.launch.LaunchList = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.launch.LaunchList.repeatedFields_, null);
 };
 goog.inherits(proto.launch.LaunchList, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.launch.LaunchList.displayName = 'proto.launch.LaunchList';
 }
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.launch.LaunchList.repeatedFields_ = [1];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -60,11 +68,8 @@ proto.launch.LaunchList.prototype.toObject = function(opt_includeInstance) {
  */
 proto.launch.LaunchList.toObject = function(includeInstance, msg) {
   var f, obj = {
-    username: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    namespace: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    launchType: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    workloadStatus: jspb.Message.getFieldWithDefault(msg, 5, "")
+    launchesList: jspb.Message.toObjectList(msg.getLaunchesList(),
+    proto.launch.LaunchView.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -102,24 +107,9 @@ proto.launch.LaunchList.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setUsername(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setNamespace(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setLaunchType(value);
-      break;
-    case 5:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setWorkloadStatus(value);
+      var value = new proto.launch.LaunchView;
+      reader.readMessage(value,proto.launch.LaunchView.deserializeBinaryFromReader);
+      msg.addLaunches(value);
       break;
     default:
       reader.skipField();
@@ -150,116 +140,45 @@ proto.launch.LaunchList.prototype.serializeBinary = function() {
  */
 proto.launch.LaunchList.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getUsername();
+  f = message.getLaunchesList();
   if (f.length > 0) {
-    writer.writeString(
+    writer.writeRepeatedMessage(
       1,
-      f
-    );
-  }
-  f = message.getName();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getNamespace();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
-  f = message.getLaunchType();
-  if (f.length > 0) {
-    writer.writeString(
-      4,
-      f
-    );
-  }
-  f = message.getWorkloadStatus();
-  if (f.length > 0) {
-    writer.writeString(
-      5,
-      f
+      f,
+      proto.launch.LaunchView.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional string username = 1;
- * @return {string}
+ * repeated LaunchView launches = 1;
+ * @return {!Array.<!proto.launch.LaunchView>}
  */
-proto.launch.LaunchList.prototype.getUsername = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.launch.LaunchList.prototype.getLaunchesList = function() {
+  return /** @type{!Array.<!proto.launch.LaunchView>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.launch.LaunchView, 1));
 };
 
 
-/** @param {string} value */
-proto.launch.LaunchList.prototype.setUsername = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+/** @param {!Array.<!proto.launch.LaunchView>} value */
+proto.launch.LaunchList.prototype.setLaunchesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * optional string name = 2;
- * @return {string}
+ * @param {!proto.launch.LaunchView=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.launch.LaunchView}
  */
-proto.launch.LaunchList.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.launch.LaunchList.prototype.addLaunches = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.launch.LaunchView, opt_index);
 };
 
 
-/** @param {string} value */
-proto.launch.LaunchList.prototype.setName = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional string namespace = 3;
- * @return {string}
- */
-proto.launch.LaunchList.prototype.getNamespace = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/** @param {string} value */
-proto.launch.LaunchList.prototype.setNamespace = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
-};
-
-
-/**
- * optional string launch_type = 4;
- * @return {string}
- */
-proto.launch.LaunchList.prototype.getLaunchType = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
-};
-
-
-/** @param {string} value */
-proto.launch.LaunchList.prototype.setLaunchType = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
-};
-
-
-/**
- * optional string workload_status = 5;
- * @return {string}
- */
-proto.launch.LaunchList.prototype.getWorkloadStatus = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
-};
-
-
-/** @param {string} value */
-proto.launch.LaunchList.prototype.setWorkloadStatus = function(value) {
-  jspb.Message.setProto3StringField(this, 5, value);
+proto.launch.LaunchList.prototype.clearLaunchesList = function() {
+  this.setLaunchesList([]);
 };
 
 

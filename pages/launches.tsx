@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Button, Container, Icon } from "semantic-ui-react";
 import withAuth from "../components/auth/withAuth";
 import CreateLaunch from "../components/launch/createLaunch";
+import LaunchTable from "../components/launch/launchList";
 
 const Launches: NextPage = () => {
   const { keycloak, initialized } = useKeycloak<KeycloakInstance>();
@@ -21,6 +22,7 @@ const Launches: NextPage = () => {
     <>
       <Container>
         <CreateLaunch namespace={username} />
+        <LaunchTable />
       </Container>
       {/* Launch table will be on that part  */}
     </>

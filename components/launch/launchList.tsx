@@ -66,8 +66,8 @@ const LaunchTable: React.FC = () => {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {launches.map((e) => (
-            <Table.Row>
+          {launches.map((e, i) => (
+            <Table.Row key={i}>
               <Table.Cell>{e.getName()}</Table.Cell>
               <Table.Cell>{e.getNamespace()}</Table.Cell>
               <Table.Cell>{e.getWorkloadStatus()}</Table.Cell>

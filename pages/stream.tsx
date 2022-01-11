@@ -4,18 +4,48 @@ import { NextPage } from "next";
 import getConfig from "next/config";
 import { useEffect, useState } from "react";
 import { Container } from "semantic-ui-react";
+import { LaunchClient } from "../api/launch/launch_grpc_web_pb";
+import { OperateRequest } from "../api/launch/launch_pb";
 import withAuth from "../components/auth/withAuth";
 import Stream from "../components/stream/stream";
 
 const StreamPage: NextPage = () => {
-  //   const url = new URL(window.location.href);
   //   const name = url.searchParams.get("name");
   //   const namespace = url.searchParams.get("namespace");
+
   const { publicRuntimeConfig } = getConfig();
 
   const { keycloak, initialized } = useKeycloak<KeycloakInstance>();
-  const [port, setPort] = useState(30444);
+
+  const [port, setPort] = useState(0);
   const [ip, setIp] = useState("23.88.52.37");
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    const workflowID = url.searchParams.get("workflowid");
+    const runID = url.searchParams.get("runid");
+    const operateLaunchRequest = new OperateRequest();
+    const client = new LaunchClient(publicRuntimeConfig.launch);
+    if (workflowID) operateLaunchRequest.setWorkflowId(workflowID);
+    if (runID) operateLaunchRequest.setRunId(runID);
+    operateLaunchRequest.setOperation("GET");
+    if (initialized && keycloak?.idToken) {
+      client.operateLaunch(
+        operateLaunchRequest,
+        {
+          authorization: "Bearer " + keycloak?.idToken,
+        },
+        (err, response) => {
+          if (err !== null) {
+            console.log(err);
+            return;
+          }
+          setPort(response.getWebrtcPort());
+          // setResult(true);
+          console.log("Launch updated");
+        }
+      );
+    }
+  }, [initialized]);
 
   return (
     <Container>

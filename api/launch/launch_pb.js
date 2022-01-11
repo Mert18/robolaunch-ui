@@ -15,6 +15,7 @@ goog.exportSymbol('proto.launch.CreateRequest', null, global);
 goog.exportSymbol('proto.launch.Empty', null, global);
 goog.exportSymbol('proto.launch.LaunchList', null, global);
 goog.exportSymbol('proto.launch.LaunchState', null, global);
+goog.exportSymbol('proto.launch.LaunchView', null, global);
 goog.exportSymbol('proto.launch.OperateRequest', null, global);
 
 /**
@@ -920,13 +921,297 @@ proto.launch.LaunchState.prototype.setNodeIp = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.launch.LaunchList = function(opt_data) {
+proto.launch.LaunchView = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.launch.LaunchView, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.launch.LaunchView.displayName = 'proto.launch.LaunchView';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.launch.LaunchView.prototype.toObject = function(opt_includeInstance) {
+  return proto.launch.LaunchView.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.launch.LaunchView} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.launch.LaunchView.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    namespace: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    launchType: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    workloadStatus: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    workflowId: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    runId: jspb.Message.getFieldWithDefault(msg, 6, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.launch.LaunchView}
+ */
+proto.launch.LaunchView.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.launch.LaunchView;
+  return proto.launch.LaunchView.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.launch.LaunchView} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.launch.LaunchView}
+ */
+proto.launch.LaunchView.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setNamespace(value);
+      break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setLaunchType(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setWorkloadStatus(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setWorkflowId(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setRunId(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.launch.LaunchView.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.launch.LaunchView.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.launch.LaunchView} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.launch.LaunchView.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getName();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getNamespace();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+  f = message.getLaunchType();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
+    );
+  }
+  f = message.getWorkloadStatus();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+  f = message.getWorkflowId();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
+  f = message.getRunId();
+  if (f.length > 0) {
+    writer.writeString(
+      6,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string name = 1;
+ * @return {string}
+ */
+proto.launch.LaunchView.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.launch.LaunchView.prototype.setName = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string namespace = 2;
+ * @return {string}
+ */
+proto.launch.LaunchView.prototype.getNamespace = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.launch.LaunchView.prototype.setNamespace = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional string launch_type = 3;
+ * @return {string}
+ */
+proto.launch.LaunchView.prototype.getLaunchType = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/** @param {string} value */
+proto.launch.LaunchView.prototype.setLaunchType = function(value) {
+  jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional string workload_status = 4;
+ * @return {string}
+ */
+proto.launch.LaunchView.prototype.getWorkloadStatus = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/** @param {string} value */
+proto.launch.LaunchView.prototype.setWorkloadStatus = function(value) {
+  jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional string workflow_id = 5;
+ * @return {string}
+ */
+proto.launch.LaunchView.prototype.getWorkflowId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/** @param {string} value */
+proto.launch.LaunchView.prototype.setWorkflowId = function(value) {
+  jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * optional string run_id = 6;
+ * @return {string}
+ */
+proto.launch.LaunchView.prototype.getRunId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/** @param {string} value */
+proto.launch.LaunchView.prototype.setRunId = function(value) {
+  jspb.Message.setProto3StringField(this, 6, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.launch.LaunchList = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.launch.LaunchList.repeatedFields_, null);
 };
 goog.inherits(proto.launch.LaunchList, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.launch.LaunchList.displayName = 'proto.launch.LaunchList';
 }
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.launch.LaunchList.repeatedFields_ = [1];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -956,11 +1241,8 @@ proto.launch.LaunchList.prototype.toObject = function(opt_includeInstance) {
  */
 proto.launch.LaunchList.toObject = function(includeInstance, msg) {
   var f, obj = {
-    username: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    namespace: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    launchType: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    workloadStatus: jspb.Message.getFieldWithDefault(msg, 5, "")
+    launchesList: jspb.Message.toObjectList(msg.getLaunchesList(),
+    proto.launch.LaunchView.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -998,24 +1280,9 @@ proto.launch.LaunchList.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setUsername(value);
-      break;
-    case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setName(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setNamespace(value);
-      break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setLaunchType(value);
-      break;
-    case 5:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setWorkloadStatus(value);
+      var value = new proto.launch.LaunchView;
+      reader.readMessage(value,proto.launch.LaunchView.deserializeBinaryFromReader);
+      msg.addLaunches(value);
       break;
     default:
       reader.skipField();
@@ -1046,116 +1313,45 @@ proto.launch.LaunchList.prototype.serializeBinary = function() {
  */
 proto.launch.LaunchList.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getUsername();
+  f = message.getLaunchesList();
   if (f.length > 0) {
-    writer.writeString(
+    writer.writeRepeatedMessage(
       1,
-      f
-    );
-  }
-  f = message.getName();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getNamespace();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
-  f = message.getLaunchType();
-  if (f.length > 0) {
-    writer.writeString(
-      4,
-      f
-    );
-  }
-  f = message.getWorkloadStatus();
-  if (f.length > 0) {
-    writer.writeString(
-      5,
-      f
+      f,
+      proto.launch.LaunchView.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional string username = 1;
- * @return {string}
+ * repeated LaunchView launches = 1;
+ * @return {!Array.<!proto.launch.LaunchView>}
  */
-proto.launch.LaunchList.prototype.getUsername = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.launch.LaunchList.prototype.getLaunchesList = function() {
+  return /** @type{!Array.<!proto.launch.LaunchView>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.launch.LaunchView, 1));
 };
 
 
-/** @param {string} value */
-proto.launch.LaunchList.prototype.setUsername = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+/** @param {!Array.<!proto.launch.LaunchView>} value */
+proto.launch.LaunchList.prototype.setLaunchesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * optional string name = 2;
- * @return {string}
+ * @param {!proto.launch.LaunchView=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.launch.LaunchView}
  */
-proto.launch.LaunchList.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.launch.LaunchList.prototype.addLaunches = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.launch.LaunchView, opt_index);
 };
 
 
-/** @param {string} value */
-proto.launch.LaunchList.prototype.setName = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional string namespace = 3;
- * @return {string}
- */
-proto.launch.LaunchList.prototype.getNamespace = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/** @param {string} value */
-proto.launch.LaunchList.prototype.setNamespace = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
-};
-
-
-/**
- * optional string launch_type = 4;
- * @return {string}
- */
-proto.launch.LaunchList.prototype.getLaunchType = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
-};
-
-
-/** @param {string} value */
-proto.launch.LaunchList.prototype.setLaunchType = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
-};
-
-
-/**
- * optional string workload_status = 5;
- * @return {string}
- */
-proto.launch.LaunchList.prototype.getWorkloadStatus = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
-};
-
-
-/** @param {string} value */
-proto.launch.LaunchList.prototype.setWorkloadStatus = function(value) {
-  jspb.Message.setProto3StringField(this, 5, value);
+proto.launch.LaunchList.prototype.clearLaunchesList = function() {
+  this.setLaunchesList([]);
 };
 
 

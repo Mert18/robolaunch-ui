@@ -43,7 +43,7 @@ const CreateLaunch: React.FC<Props> = ({ namespace }) => {
       client.createLaunch(
         launchRequest,
         {
-          authorization: keycloak?.idToken,
+          authorization: "Bearer " + keycloak?.idToken,
         },
         (err, response) => {
           if (err !== null) {

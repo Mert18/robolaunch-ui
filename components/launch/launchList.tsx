@@ -1,6 +1,7 @@
 import { useKeycloak } from "@react-keycloak/ssr";
 import { KeycloakInstance } from "keycloak-js";
 import getConfig from "next/config";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { Container, Icon, Table } from "semantic-ui-react";
 import { LaunchClient } from "../../api/launch/launch_grpc_web_pb";
@@ -60,8 +61,8 @@ const LaunchTable: React.FC = () => {
             <Table.HeaderCell>Name</Table.HeaderCell>
             <Table.HeaderCell>Namespace</Table.HeaderCell>
             <Table.HeaderCell>Status</Table.HeaderCell>
-
             <Table.HeaderCell>Operations</Table.HeaderCell>
+            <Table.HeaderCell>Run</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
         <Table.Body>
@@ -89,6 +90,13 @@ const LaunchTable: React.FC = () => {
                   }
                   name="stop"
                 />
+              </Table.Cell>
+              <Table.Cell>
+                <Link
+                  href={`/stream?workflowid=${e.getWorkflowId()}&runid=${e.getRunId()}`}
+                >
+                  Neko
+                </Link>
               </Table.Cell>
             </Table.Row>
           ))}

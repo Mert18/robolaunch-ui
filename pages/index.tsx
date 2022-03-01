@@ -8,7 +8,7 @@ import { KeycloakInstance } from "keycloak-js";
 import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
-  const router = useRouter()
+  const router = useRouter();
   const { keycloak, initialized } = useKeycloak<KeycloakInstance>();
 
   const login = () => {
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Container style={{ marginTop: "2em" }}>
-        <Header as="h2">Test Zone</Header>
+        <Header as="h2">| Test Zone |</Header>
         <p>
           <Button animated onClick={() => login()}>
             <Button.Content visible>Login</Button.Content>

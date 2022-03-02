@@ -8,9 +8,18 @@ module.exports = {
       fontFamily: {
         roboto: ["Roboto", ...defaultTheme.fontFamily.sans],
       },
+      gridTemplateRows: {
+        // Simple 8 row grid
+        12: "repeat(12, minmax(0, 1fr))",
+
+        // Complex site-specific row configuration
+        layout: "200px minmax(900px, 1fr) 100px",
+      },
     },
     colors: {
       transparent: "transparent",
+      purpleGradient:
+        "linear-gradient(to right, rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234))",
       current: "currentColor",
       white: "#ffffff",
       purple: "#3f3cbb",

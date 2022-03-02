@@ -1,14 +1,14 @@
 import React from "react";
 import Layout from "../../components/Layout/Layout";
 
-const Home = () => {
+const Instances = () => {
   return (
     <Layout>
       <div>
-        <p className="text-3xl">HOME SCREEN</p>
+        <p>Instances page</p>
       </div>
     </Layout>
   );
 };
 
-export default Home;
+export default Instances;

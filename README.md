@@ -4,12 +4,15 @@
 
 ![alt text](https://github.com/robolaunch/robolaunch/blob/main/service.png?raw=true)
 
-First, run the development server:
+First, install the dependencies:
 
+```
+yarn
+```
+
+Then, start the application locally:
 ```bash
-npm run dev
-# or
-yarn dev
+yarn start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

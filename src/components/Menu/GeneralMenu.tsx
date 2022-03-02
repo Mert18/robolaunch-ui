@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 
 const GeneralMenu = () => {
   return (
-    <div className="flex flex-col justify-between items-center h-screen border-2 border-black">
+    <div className="flex flex-col justify-between items-center h-screen shadow-xl fixed">
       <div className="">
         <img src="./robolaunch-square.png" alt="Robolaunch" width="120px" />
       </div>
       <ul className="flex flex-col justify-center items-center text-[13px]  w-full">
         <li className="mt-4 mb-4 flex flex-col items-center justify-center font-bold  w-full">
           <Link
-            to="/robots"
+            to="/instances"
             className="w-full flex flex-col justify-center items-center hover:text-purple transition-all"
           >
             <img src="./robot.svg" alt="Single robot" width="50px" />
-            <p>ROBOT</p>
+            <p>INSTANCES</p>
           </Link>
         </li>
         <li className="mb-4 flex flex-col items-center justify-center font-bold  w-full">

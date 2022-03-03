@@ -1,4 +1,5 @@
 import Keycloak from "keycloak-js";
+import { Env } from "./constants";
 
 type KeycloakConfig = {
   realm: string;
@@ -7,9 +8,9 @@ type KeycloakConfig = {
 };
 
 const keycloakCfg: KeycloakConfig = {
-  realm: process.env.REACT_APP_KEYCLOAK_REALM as string,
-  url: process.env.REACT_APP_KEYCLOAK_URL as string,
-  clientId: process.env.REACT_APP_KEYCLOAK_CLIENT_ID as string,
+  realm: Env.KEYCLOAK_REALM as string,
+  url: Env.KEYCLOAK_URL as string,
+  clientId: Env.KEYCLOAK_CLIENT_ID as string,
 };
 // Setup Keycloak instance as needed
 // Pass initialization options as required or leave blank to load from 'keycloak.json'

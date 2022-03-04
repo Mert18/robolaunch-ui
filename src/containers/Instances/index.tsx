@@ -26,15 +26,9 @@ const Instances = () => {
     }
   }, [initialized, keycloak]);
 
-  useEffect(() => {
-    console.log(launches);
-  }, [launches]);
-
   return (
     <Layout>
-      <div>
-        <InstanceList instances={launches} />
-      </div>
+      <InstanceList instances={launches} />
     </Layout>
   );
 };

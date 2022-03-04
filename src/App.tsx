@@ -5,6 +5,7 @@ import Fleet from "./containers/Fleet";
 
 import Home from "./containers/Home";
 import Instances from "./containers/Instances";
+import Flow from "./containers/Flow";
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
         <Route path="/instances" element={<Instances />} />
         <Route path="/fleet" element={<Fleet />} />
         <Route path="/development" element={<Development />} />
+        <Route path="/flow" element={<Flow />} />
       </Routes>
     </BrowserRouter>
   );

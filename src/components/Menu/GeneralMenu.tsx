@@ -5,12 +5,12 @@ const GeneralMenu = () => {
   return (
     <div className="flex flex-col justify-between items-center h-screen shadow-xl fixed">
       <div className="">
-        <img src="./robolaunch-square.png" alt="Robolaunch" width="120px" />
+        <img src="./robolaunch-square.png" alt="Robolaunch" width="100px" />
       </div>
       <ul className="flex flex-col justify-center items-center text-[13px]  w-full">
-        <li className="mt-4 mb-4 flex flex-col items-center justify-center font-bold  w-full">
+        <li className="mt-4 mb-4 flex flex-col items-center justify-center font-bold  w-full ">
           <Link
-            to="/instances"
+            to="/flow"
             className="w-full flex flex-col justify-center items-center hover:text-purple transition-all"
           >
             <img src="./robot.svg" alt="Single robot" width="50px" />
@@ -32,7 +32,7 @@ const GeneralMenu = () => {
             className="w-full flex flex-col justify-center items-center hover:text-purple transition-all"
           >
             <img src="./dev.svg" alt="Development Environment" width="50px" />
-            <p>DEVELOPMENT</p>
+            <p>DEV</p>
           </Link>
         </li>
       </ul>

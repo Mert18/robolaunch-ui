@@ -5,8 +5,8 @@ import GeneralMenu from "../Menu/GeneralMenu";
 
 const Layout: React.FC = ({ children }) => {
   return (
-    <div className="grid grid-cols-12 grid-rows-12 gap-0">
-      <div className="col-start-1 col-end-2 row-start-1 row-end-12">
+    <div className="grid grid-cols-[100px_1fr]">
+      <div className="col-start-1 col-end-2 ">
         <GeneralMenu />
       </div>
       <div className="col-start-2 col-end-13 row-start-1 row-end-12 flex flex-col">

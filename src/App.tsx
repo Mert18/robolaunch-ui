@@ -5,19 +5,9 @@ import Fleet from "./containers/Fleet";
 
 import Home from "./containers/Home";
 import Instances from "./containers/Instances";
-import SignUp from "./containers/SignUp";
-import { useKeycloak } from "@react-keycloak/web";
-import { KeycloakInstance } from "keycloak-js";
 
 const App: React.FC = () => {
-  //@ts-ignore
-  const { keycloak, initialized } = useKeycloak<KeycloakInstance>();
-
-  const login = () => {
-    if (keycloak) window.location.href = keycloak?.createLoginUrl();
-  };
-
-  return keycloak.authenticated ? (
+  return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -26,8 +16,6 @@ const App: React.FC = () => {
         <Route path="/development" element={<Development />} />
       </Routes>
     </BrowserRouter>
-  ) : (
-    <SignUp />
   );
 };
 

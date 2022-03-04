@@ -5,5 +5,3 @@ protoc -I=launch launch.proto \
 protoc -I=launch launch.proto \
     --js_out=import_style=commonjs+dts:../api/launch \
     --grpc-web_out=import_style=commonjs+dts,mode=grpcwebtext:../api/launch
-
-

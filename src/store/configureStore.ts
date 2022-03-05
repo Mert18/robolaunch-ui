@@ -1,6 +1,6 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { rootReducer } from "./reducers";
-import { Env } from "../constants";
+import { configureStore } from '@reduxjs/toolkit'
+import { rootReducer } from './reducers'
+import { Env } from '../constants'
 
 /**
  * @see https://redux-toolkit.js.org/usage/usage-with-typescript#correct-typings-for-the-dispatch-type
@@ -8,5 +8,5 @@ import { Env } from "../constants";
 
 export const store = configureStore({
   reducer: rootReducer,
-  devTools: Env.NODE_ENV === "development",
-});
+  devTools: Env.NODE_ENV === 'development',
+})

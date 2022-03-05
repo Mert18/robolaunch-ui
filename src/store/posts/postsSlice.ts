@@ -1,5 +1,5 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { FeatureKey } from "../featureKey";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import { FeatureKey } from '../featureKey'
 
 /**
  * Payload
@@ -22,13 +22,13 @@ import { FeatureKey } from "../featureKey";
 
 const initialState: any = {
   list: [],
-};
+}
 
-export const getPosts = createAsyncThunk("posts/getPosts", async () => {
-  return fetch("https://jsonplaceholder.typicode.com/posts").then((res) =>
+export const getPosts = createAsyncThunk('posts/getPosts', async () => {
+  return fetch('https://jsonplaceholder.typicode.com/posts').then((res) =>
     res.json()
-  );
-});
+  )
+})
 
 const postsSlice = createSlice({
   name: FeatureKey.USER,
@@ -36,21 +36,21 @@ const postsSlice = createSlice({
   reducers: {},
   extraReducers: {
     [getPosts.pending.toString()]: (state: any, action: any) => {
-      state.status = "loading";
+      state.status = 'loading'
     },
     [getPosts.fulfilled.toString()]: (state: any, { payload }: any) => {
-      state.list = payload;
-      state.status = "success";
+      state.list = payload
+      state.status = 'success'
     },
     [getPosts.rejected.toString()]: (state: any, action: any) => {
-      state.status = "rejected";
+      state.status = 'rejected'
     },
   },
-});
+})
 
-export const selectAllPosts = (state: any) => state.posts;
+export const selectAllPosts = (state: any) => state.posts
 
 /**
  * Reducer
  */
-export default postsSlice.reducer;
+export default postsSlice.reducer

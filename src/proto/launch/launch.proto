@@ -52,4 +52,3 @@ message LaunchView {
 message LaunchList {
   repeated LaunchView launches= 1;
 }
-

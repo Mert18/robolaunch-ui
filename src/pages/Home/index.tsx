@@ -1,8 +1,12 @@
-import React from 'react'
 import Layout from '../../components/Layout/Layout'
+import { HomeWrapper } from './Home.styles'
 
 const Home = () => {
-  return <Layout>Home</Layout>
+  return (
+    <Layout>
+      <HomeWrapper>HOME</HomeWrapper>
+    </Layout>
+  )
 }
 
 export default Home

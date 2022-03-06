@@ -15,3 +15,7 @@ export const GeneralMenuWrapper = styled.div<GeneralMenuProps>`
   left: ${(props) => (props.isOpen ? `0` : `-500px`)};
   transition: left 0.2s linear;
 `
+
+export const MenuList = styled.ul`
+  padding: 0;
+`

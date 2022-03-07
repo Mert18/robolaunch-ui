@@ -4,7 +4,7 @@ import { HomeWrapper } from './Home.styles'
 const Home = () => {
   return (
     <Layout>
-      <HomeWrapper>HOME</HomeWrapper>
+            <HomeWrapper>HOME</HomeWrapper>
     </Layout>
   )
 }

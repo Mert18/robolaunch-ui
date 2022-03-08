@@ -1,13 +1,15 @@
-import { useState } from 'react'
 import { HeaderWrapper, MenuIcon } from './Header.styles'
-import GeneralMenu from '../GeneralMenu'
+import { useContext } from 'react'
+
+import MenuContext from '../../context/MenuContext'
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const { value, toggleValue } = useContext(MenuContext)
 
   const handleMenuStatus = () => {
-    setIsOpen(true)
+    toggleValue()
   }
+
   return (
     <HeaderWrapper>
       <MenuIcon onClick={handleMenuStatus}>
@@ -15,8 +17,6 @@ const Header = () => {
         <div></div>
         <div></div>
       </MenuIcon>
-      <GeneralMenu isOpen={isOpen} setIsOpen={setIsOpen} />
-      <div></div>
     </HeaderWrapper>
   )
 }

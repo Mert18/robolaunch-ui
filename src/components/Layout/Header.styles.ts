@@ -29,4 +29,8 @@ export const MenuIcon = styled.div`
     width: 100%;
     margin: 0.2rem 0rem;
   }
-`
+
+  &:hover {
+    cursor: pointer;
+  }
+  `

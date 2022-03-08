@@ -8,9 +8,9 @@ export const LayoutWrapper = styled.div`
     'header header'
     'menu main'
     'footer footer';
+  background: var(--white);
 `
 
 export const MainWrapper = styled.main`
   grid-area: main;
-  border: 1px solid black;
 `

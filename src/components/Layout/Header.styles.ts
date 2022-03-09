@@ -6,6 +6,7 @@ export const HeaderWrapper = styled.header`
   grid-template-columns: 10px 40px auto 65px 10px;
   grid-template-rows: 1fr;
   grid-template-areas: '. menuicon nav profile .';
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
 `
 
 export const MenuIcon = styled.div`

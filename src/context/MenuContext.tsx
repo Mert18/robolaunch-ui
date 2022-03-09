@@ -6,8 +6,8 @@ interface IMenuContext {
 }
 
 const defaultState = {
-  value: localStorage.getItem('isopen') || 'open',
-  toggleValue: () => localStorage.setItem('isopen', 'open'),
+  value: localStorage.getItem('isopen') || 'close',
+  toggleValue: () => localStorage.setItem('isopen', 'close'),
 }
 const MenuContext = createContext<IMenuContext>(defaultState)
 

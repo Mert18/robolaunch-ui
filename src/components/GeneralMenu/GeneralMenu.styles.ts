@@ -7,35 +7,46 @@ type MenuProps = {
 
 export const GeneralMenuWrapper = styled.div<MenuProps>`
   grid-area: menu;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 132px auto auto;
+  grid-template-areas: "logo"
+  "mainmenu"
+  "favorites"
+  ;
   min-height: 80vh;
-  width: 270px;
+  width: 286px;
   background: var(--white);
-  transition: .1s;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+  transition: all .1s;
 
 
   ${(props) =>
     props.isopen === 'open'
       ? ``
       : `
-    width: 65px;
+      width: 66px;
+      box-shadow: inset 0px 0px 7.5px rgba(0, 0, 0, 0.1);
   `}
+`
+
+export const Logo = styled.div`
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Image = styled.img`
+    
 `
 
 export const StyledLink = styled(Link)<LinkProps>`
   color: var(--black);
   display: flex;
-  padding: 0.8rem;
   align-items: center;
   text-decoration: none;
   position: relative;
   width: 100%;
-  & > img {
-    margin-right: 0.4rem;
-  }
 
   ${(props) =>
     props.isopen === 'open'
@@ -82,7 +93,8 @@ export const MenuListTopItem = styled.li<ListItemProps>`
   ${(props) =>
     props.active &&
     `
-  box-shadow: inset 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
+        box-shadow: inset 0px 0px 7.5px rgba(0, 0, 0, 0.1);
+
   `};
 `
 

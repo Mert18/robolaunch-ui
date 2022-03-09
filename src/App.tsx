@@ -1,25 +1,19 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home'
-import Fleet from './pages/Fleet'
-import Robot from './pages/Robot'
-import TaskManagement from './pages/TaskManagement'
-import Config from './pages/Config'
-import Accounting from './pages/Accounting'
-import Performance from './pages/Performance'
-import Security from './pages/Security'
+import Dashboard from './pages/Dashboard'
+import Development from './pages/Development'
+import Management from './pages/Management'
+import Settings from './pages/Settings'
+import View from './pages/View'
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/fleet" element={<Fleet />} />
-        <Route path="/robot" element={<Robot />} />
-        <Route path="/task" element={<TaskManagement />} />
-        <Route path="/config" element={<Config />} />
-        <Route path="/accounting" element={<Accounting />} />
-        <Route path="/performance" element={<Performance />} />
-        <Route path="/security" element={<Security />} />
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/development" element={<Development />} /> 
+        <Route path="/management" element={<Management />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/view" element={<View />} />
       </Routes>
     </BrowserRouter>
   )

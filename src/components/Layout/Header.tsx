@@ -1,4 +1,4 @@
-import { HeaderWrapper, MenuIcon } from './Header.styles'
+import { HeaderWrapper, MenuIcon, Image, User, FAQ, Notifications, Profile} from './Header.styles'
 import { useContext } from 'react'
 
 import MenuContext from '../../context/MenuContext'
@@ -13,10 +13,19 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <MenuIcon onClick={handleMenuStatus}>
-        <div></div>
-        <div></div>
-        <div></div>
+        <Image src="/icons/hamburger.svg" alt="menu" />
       </MenuIcon>
+      <User>
+        <FAQ>
+          <Image />
+        </FAQ>
+        <Notifications>
+          <Image />
+        </Notifications>
+        <Profile>
+          <Image />
+        </Profile>
+      </User>
     </HeaderWrapper>
   )
 }

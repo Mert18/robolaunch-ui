@@ -1,3 +1,4 @@
+import {useState} from "react";
 import {
   GeneralMenuWrapper,
   MenuListTop,
@@ -7,94 +8,101 @@ import {
   MenuListBottomItem,
   MenuIcon,
   MenuRouteName,
+  Logo,
+  Image
 } from './GeneralMenu.styles'
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import MenuContext from '../../context/MenuContext'
 import { useLocation } from 'react-router-dom'
 
 const GeneralMenu = () => {
-  const { value, toggleValue } = useContext(MenuContext)
+  const { value, toggleValue } = useContext(MenuContext);
+  const [viewDropdown, setViewDropdown] = useState(false);
   const location = useLocation()
 
   return (
     <GeneralMenuWrapper isopen={value}>
+      <Logo>
+        {value === "open" ? <Image src="/icons/sidebar-logo.svg" alt="robolaunch" /> : <Image src="/icons/sidebar-min-logo.svg" alt="robolaunch" />} 
+      </Logo>
       <MenuListTop>
         <MenuListTopItem active={location.pathname === '/' ? true : false}>
           <StyledLink to="/" isopen={value}>
-            <MenuIcon src="/icons/home.svg" alt="home svg" width="36px" isopen={value}/>
-            <MenuRouteName>Home</MenuRouteName>
+            <MenuIcon
+              src="/icons/sidebar-dashboard.svg"
+              alt="dashboard"
+              isopen={value}
+            />
+            <MenuRouteName>Dashboard</MenuRouteName>
           </StyledLink>
         </MenuListTopItem>
 
-        <MenuListTopItem active={location.pathname === '/fleet' ? true : false}>
-          <StyledLink to="/fleet" isopen={value}>
-            <MenuIcon src="/icons/home.svg" alt="home svg" width="36px" isopen={value} />
-            <MenuRouteName>Fleet</MenuRouteName>
+        <MenuListTopItem active={location.pathname === '/view' ? true : false}>
+          <StyledLink to="/view" isopen={value}>
+            <MenuIcon
+              src="/icons/sidebar-view.svg"
+              alt="view"
+              isopen={value}
+            />
+            <MenuRouteName>View</MenuRouteName>
           </StyledLink>
         </MenuListTopItem>
 
-        <MenuListTopItem active={location.pathname === '/robot' ? true : false}>
-          <StyledLink to="/robot" isopen={value}>
-            <MenuIcon src="/icons/home.svg" alt="home svg" width="36px" isopen={value} />
-            <MenuRouteName>Robot</MenuRouteName>
+        <MenuListTopItem active={location.pathname === '/management' ? true : false}>
+          <StyledLink to="/management" isopen={value}>
+            <MenuIcon
+              src="/icons/sidebar-management.svg"
+              alt="management"
+              isopen={value}
+            />
+            <MenuRouteName>Management</MenuRouteName>
           </StyledLink>
         </MenuListTopItem>
 
-        <MenuListTopItem active={location.pathname === '/task' ? true : false}>
-          <StyledLink to="/task" isopen={value}>
-            <MenuIcon src="/icons/home.svg" alt="home svg" width="36px" isopen={value} />
-            <MenuRouteName>Task Management</MenuRouteName>
-          </StyledLink>
-        </MenuListTopItem>
-
-        <MenuListTopItem
-          active={location.pathname === '/config' ? true : false}
-        >
-          <StyledLink to="/config" isopen={value}>
-            <MenuIcon src="/icons/home.svg" alt="home svg" width="36px" isopen={value} />
-            <MenuRouteName>Config</MenuRouteName>
-          </StyledLink>
-        </MenuListTopItem>
-
-        <MenuListTopItem
-          active={location.pathname === '/accounting' ? true : false}
-        >
-          <StyledLink to="/accounting" isopen={value}>
-            <MenuIcon src="/icons/home.svg" alt="home svg" width="36px" isopen={value} />
-            <MenuRouteName>Accounting</MenuRouteName>
-          </StyledLink>
-        </MenuListTopItem>
-
-        <MenuListTopItem
-          active={location.pathname === '/performance' ? true : false}
-        >
-          <StyledLink to="/performance" isopen={value}>
-            <MenuIcon src="/icons/home.svg" alt="home svg" width="36px" isopen={value} />
-            <MenuRouteName>Performance</MenuRouteName>
+        <MenuListTopItem active={location.pathname === '/development' ? true : false}>
+          <StyledLink to="/development" isopen={value}>
+            <MenuIcon
+              src="/icons/sidebar-development.svg"
+              alt="development"
+              isopen={value}
+            />
+            <MenuRouteName>Development</MenuRouteName>
           </StyledLink>
         </MenuListTopItem>
 
         <MenuListTopItem
-          active={location.pathname === '/security' ? true : false}
+          active={location.pathname === '/settings' ? true : false}
         >
-          <StyledLink to="/security" isopen={value}>
-            <MenuIcon src="/icons/home.svg" alt="home svg" width="36px" isopen={value} />
-            <MenuRouteName>Security</MenuRouteName>
+          <StyledLink to="/settings" isopen={value}>
+            <MenuIcon
+              src="/icons/sidebar-settings.svg"
+              alt="settings"
+              isopen={value}
+            />
+            <MenuRouteName>Settings</MenuRouteName>
           </StyledLink>
         </MenuListTopItem>
       </MenuListTop>
 
       <MenuListBottom>
         <MenuListBottomItem>
-          <StyledLink to="/security" isopen={value}>
-            <MenuIcon src="/icons/home.svg" alt="home svg" width="36px" isopen={value} />
+          <StyledLink to="/" isopen={value}>
+            <MenuIcon
+              src="/icons/sidebar-star.svg"
+              alt="star"
+              isopen={value}
+            />
             <MenuRouteName>Favorite 1</MenuRouteName>
           </StyledLink>
         </MenuListBottomItem>
 
         <MenuListBottomItem>
-          <StyledLink to="/security" isopen={value}>
-            <MenuIcon src="/icons/home.svg" alt="home svg" width="36px" isopen={value} />
+          <StyledLink to="/" isopen={value}>
+            <MenuIcon
+              src="/icons/sidebar-star.svg"
+              alt="home svg"
+              isopen={value}
+            />
             <MenuRouteName>Favorite 2</MenuRouteName>
           </StyledLink>
         </MenuListBottomItem>

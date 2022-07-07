@@ -1,0 +1,179 @@
+[
+  {
+    "cloudInstanceName": "ci-21hd",
+    "regionName": "tr-west",
+    "fleets": [
+      {
+        "name": "brian",
+        "robots": [
+          {
+            "robotName": "robot-dolphin",
+            "status": "Active",
+            "fleet": "brian",
+            "distro": "ROS Foxy Fitzroy",
+            "cloudIDE": "Passive",
+            "router": "Router #1",
+            "VDI": true,
+            "battery": 55
+          },
+          {
+            "robotName": "freyir",
+            "status": "Active",
+            "fleet": "brian",
+            "distro": "ROS Foxy Fitzroy",
+            "cloudIDE": "Active",
+            "router": "Router #3",
+            "VDI": false,
+            "battery": 89
+          }
+        ]
+      },
+      {
+        "name": "kaggle",
+        "robots": [
+          {
+            "robotName": "hyuagene",
+            "status": "Passive",
+            "fleet": "brian",
+            "distro": "ROS Galactic",
+            "cloudIDE": "Passive",
+            "router": "Router #1",
+            "VDI": true,
+            "battery": 20
+          }
+        ]
+      }
+    ],
+    "numberOfFleets": 2,
+    "numberOfRobots": 12,
+    "numberOfPhysicalInstances": 2,
+    "provisionedResource": {
+      "cpu": {
+        "cloud": 3,
+        "physical": 1
+      },
+      "ram": {
+        "cloud": 4,
+        "physical": 2
+      },
+      "gpu": {
+        "cloud": 1,
+        "physical": 1
+      },
+      "disk": {
+        "cloud": 25,
+        "physical": 50
+      }
+    },
+    "connectionHubStatus": "Pending",
+    "instanceStatus": "Active"
+  },
+  {
+    "cloudInstanceName": "ci-jkyll",
+    "regionName": "eu-west",
+    "fleets": [
+      {
+        "name": "flair",
+        "robots": [
+          {
+            "robotName": "juckell",
+            "status": "Active",
+            "fleet": "flair",
+            "distro": "ROS Foxy Fitzroy",
+            "cloudIDE": "Active",
+            "router": "Router #1",
+            "VDI": true,
+            "battery": 5
+          },
+          {
+            "robotName": "lord",
+            "status": "Active",
+            "fleet": "flair",
+            "distro": "ROS Foxy Fitzroy",
+            "cloudIDE": "Active",
+            "router": "Router #1",
+            "VDI": true,
+            "battery": 5
+          }
+        ]
+      }
+    ],
+    "numberOfFleets": 1,
+    "numberOfRobots": 42,
+    "numberOfPhysicalInstances": 5,
+    "provisionedResource": {
+      "cpu": {
+        "cloud": 8,
+        "physical": 4
+      },
+      "ram": {
+        "cloud": 16,
+        "physical": 8
+      },
+      "gpu": {
+        "cloud": 2,
+        "physical": 1
+      },
+      "disk": {
+        "cloud": 100,
+        "physical": 100
+      }
+    },
+    "connectionHubStatus": "N/A",
+    "instanceStatus": "Pending"
+  },
+  {
+    "cloudInstanceName": "ci-gulp",
+    "regionName": "us-anadolu",
+    "fleets": [
+      {
+        "name": "huyen",
+        "robots": [
+          {
+            "robotName": "traum",
+            "status": "Active",
+            "fleet": "huyen",
+            "distro": "ROS Foxy Fitzroy",
+            "cloudIDE": "Active",
+            "router": "Router #3",
+            "VDI": true,
+            "battery": 27
+          },
+          {
+            "robotName": "lillion",
+            "status": "Active",
+            "fleet": "huyen",
+            "distro": "ROS Foxy Fitzroy",
+            "cloudIDE": "Active",
+            "router": "Router #2",
+            "VDI": true,
+            "battery": 32
+          }
+        ]
+      }
+    ],
+    "numberOfFleets": 1,
+    "numberOfRobots": 86,
+    "numberOfPhysicalInstances": 12,
+    "provisionedResource": {
+      "cpu": {
+        "cloud": 12,
+        "physical": 8
+      },
+      "ram": {
+        "cloud": 64,
+        "physical": 16
+      },
+      "gpu": {
+        "cloud": 4,
+        "physical": 2
+      },
+      "disk": {
+        "cloud": 200,
+        "physical": 150
+      }
+    },
+    "connectionHubStatus": "Active",
+    "instanceStatus": "Active"
+  }
+]

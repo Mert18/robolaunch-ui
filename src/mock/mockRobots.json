@@ -1,0 +1,88 @@
+[
+  {
+    "robotName": "robot-dolphin",
+    "status": "Active",
+    "fleet": "brian",
+    "distro": "ROS Foxy Fitzroy",
+    "cloudIDE": false,
+    "teleoperation": false,
+    "router": "Router #1",
+    "VDI": true,
+    "battery": 55
+  },
+  {
+    "robotName": "hyuagene",
+    "status": "Active",
+    "fleet": "kaggle",
+    "distro": "ROS Foxy Fitzroy",
+    "cloudIDE": false,
+    "teleoperation": false,
+    "VDI": true,
+    "router": "Router #3",
+    "battery": 89
+  },
+  {
+    "robotName": "juckell",
+    "status": "Passive",
+    "fleet": "flair",
+    "distro": "ROS Galactic",
+    "cloudIDE": true,
+    "teleoperation": false,
+    "router": "Router #1",
+    "VDI": true,
+    "battery": 20
+  },
+  {
+    "robotName": "freyir",
+    "status": "Active",
+    "fleet": "brian",
+    "distro": "ROS Foxy Fitzroy",
+    "cloudIDE": false,
+    "teleoperation": false,
+    "router": "Router #1",
+    "VDI": true,
+    "battery": 5
+  },
+  {
+    "robotName": "lord",
+    "status": "Active",
+    "fleet": "flair",
+    "distro": "ROS Foxy Fitzroy",
+    "cloudIDE": false,
+    "teleoperation": true,
+    "router": "Router #3",
+    "VDI": false,
+    "battery": 27
+  },
+  {
+    "robotName": "steve",
+    "status": "Active",
+    "fleet": "huyen",
+    "distro": "ROS Foxy Fitzroy",
+    "cloudIDE": true,
+    "teleoperation": false,
+    "router": "Router #2",
+    "VDI": false,
+    "battery": 32
+  },
+  {
+    "robotName": "traum",
+    "status": "Active",
+    "fleet": "huyen",
+    "distro": "ROS Foxy Fitzroy",
+    "cloudIDE": "Active",
+    "router": "Router #3",
+    "VDI": true,
+    "battery": 27
+  },
+  {
+    "robotName": "lillion",
+    "status": "Active",
+    "fleet": "huyen",
+    "distro": "ROS Foxy Fitzroy",
+    "cloudIDE": "Active",
+    "router": "Router #2",
+    "VDI": true,
+    "battery": 32
+  }
+]

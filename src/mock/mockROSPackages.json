@@ -1,0 +1,6 @@
+[
+  {
+    "name": "moveit_core",
+    "description": "Core libraries used by MoveIt!"
+  }
+]

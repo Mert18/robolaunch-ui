@@ -1,0 +1,26 @@
+[
+  {
+    "name": "beginner",
+    "family": "r2",
+    "cpu": "1vCPU",
+    "memory": "1GiB",
+    "gpu": "NVIDIA v100 GPU",
+    "storage": "8GiB"
+  },
+  {
+    "name": "advanced",
+    "family": "r5",
+    "cpu": "4vCPU",
+    "memory": "32iB",
+    "gpu": "NVIDIA v200 GPU",
+    "storage": "64GiB"
+  },
+  {
+    "name": "median",
+    "family": "r3",
+    "cpu": "4vCPU",
+    "memory": "16iB",
+    "gpu": "NVIDIA v100 GPU",
+    "storage": "48GiB"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1",
+    "name": "org-robo",
+    "members": 23,
+    "physicalInstances": 12,
+    "cloudInstances": 3,
+    "fleets": 5,
+    "robots": 43,
+    "owner": "Gokhan Gunduz",
+    "createdAt": "05.24.2022 14:32"
+  },
+  {
+    "id": "2",
+    "name": "provedge",
+    "members": 12,
+    "physicalInstances": 52,
+    "cloudInstances": 6,
+    "fleets": 15,
+    "robots": 239,
+    "owner": "Mert Uygur",
+    "createdAt": "01.23.2022 16:32"
+  }
+]

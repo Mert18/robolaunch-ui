@@ -1,0 +1,13 @@
+node_modules/*
+dist
+.husky
+public/*
+src/api
+src/proto
+src/services
+src/utils
+*.css
+*.svg
+tailwind.config.js
+postcss.config.js
+webpack.config.js

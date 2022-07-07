@@ -1,8 +1,6 @@
-import React from 'react'
-import { FooterWrapper } from './Footer.styles'
+import React from 'react';
 
 const Footer = () => {
-  return <FooterWrapper>Footer</FooterWrapper>
-}
-
-export default Footer
+  return <footer className="footer">Footer</footer>;
+};
+export default Footer;

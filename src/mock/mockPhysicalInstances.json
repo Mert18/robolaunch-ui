@@ -1,0 +1,173 @@
+[
+  {
+    "physicalInstanceName": "pi-342j1",
+    "regionName": "tr-west",
+    "numberOfRobots": 12,
+    "vpnConnectionStatus": "Pending",
+    "provisionedResource": {
+      "cpu": {
+        "cloud": 3,
+        "physical": 1
+      },
+      "ram": {
+        "cloud": 4,
+        "physical": 2
+      },
+      "gpu": {
+        "cloud": 1,
+        "physical": 1
+      },
+      "disk": {
+        "cloud": 25,
+        "physical": 50
+      }
+    },
+    "instanceStatus": "Active",
+    "connectionHub": "ci-21hd",
+    "robots": [
+      {
+        "robotName": "robot-dolphin",
+        "status": "Active",
+        "fleet": "brian",
+        "distro": "ROS Foxy Fitzroy",
+        "cloudIDE": "Passive",
+        "router": "Router #1",
+        "VDI": true,
+        "battery": 55
+      },
+      {
+        "robotName": "hyuagene",
+        "status": "Active",
+        "fleet": "kaggle",
+        "distro": "ROS Foxy Fitzroy",
+        "cloudIDE": "Active",
+        "router": "Router #3",
+        "VDI": false,
+        "battery": 89
+      }
+    ]
+  },
+  {
+    "physicalInstanceName": "pi-kachu",
+    "regionName": "eu-west",
+    "vpnConnectionStatus": "Passive",
+    "numberOfRobots": 42,
+    "provisionedResource": {
+      "cpu": {
+        "cloud": 8,
+        "physical": 4
+      },
+      "ram": {
+        "cloud": 16,
+        "physical": 8
+      },
+      "gpu": {
+        "cloud": 2,
+        "physical": 1
+      },
+      "disk": {
+        "cloud": 100,
+        "physical": 100
+      }
+    },
+    "instanceStatus": "Active",
+    "connectionHub": "ci-21hd",
+    "robots": [
+      {
+        "robotName": "juckell",
+        "status": "Passive",
+        "fleet": "flair",
+        "distro": "ROS Galactic",
+        "cloudIDE": "Passive",
+        "router": "Router #1",
+        "VDI": true,
+        "battery": 20
+      },
+      {
+        "robotName": "freyir",
+        "status": "Active",
+        "fleet": "brian",
+        "distro": "ROS Foxy Fitzroy",
+        "cloudIDE": "Active",
+        "router": "Router #1",
+        "VDI": true,
+        "battery": 5
+      },
+      {
+        "robotName": "lord",
+        "status": "Active",
+        "fleet": "flair",
+        "distro": "ROS Foxy Fitzroy",
+        "cloudIDE": "Active",
+        "router": "Router #3",
+        "VDI": true,
+        "battery": 27
+      }
+    ]
+  },
+  {
+    "physicalInstanceName": "pi-lacka",
+    "regionName": "us-anadolu",
+    "vpnConnectionStatus": "Active",
+    "numberOfRobots": 86,
+    "provisionedResource": {
+      "cpu": {
+        "cloud": 12,
+        "physical": 8
+      },
+      "ram": {
+        "cloud": 64,
+        "physical": 16
+      },
+      "gpu": {
+        "cloud": 4,
+        "physical": 2
+      },
+      "disk": {
+        "cloud": 200,
+        "physical": 150
+      }
+    },
+    "instanceStatus": "Pending",
+    "connectionHub": "ci-jkyll",
+    "robots": [
+      {
+        "robotName": "steve",
+        "status": "Active",
+        "fleet": "huyen",
+        "distro": "ROS Foxy Fitzroy",
+        "cloudIDE": "Active",
+        "router": "Router #2",
+        "VDI": true,
+        "battery": 32
+      }
+    ]
+  },
+  {
+    "physicalInstanceName": "pi-nokio",
+    "regionName": "us-anadolu",
+    "vpnConnectionStatus": "N/A",
+    "numberOfRobots": 86,
+    "provisionedResource": {
+      "cpu": {
+        "cloud": 12,
+        "physical": 8
+      },
+      "ram": {
+        "cloud": 64,
+        "physical": 16
+      },
+      "gpu": {
+        "cloud": 4,
+        "physical": 2
+      },
+      "disk": {
+        "cloud": 200,
+        "physical": 150
+      }
+    },
+    "instanceStatus": "Active",
+    "connectionHub": "ci-gulp",
+    "robots": []
+  }
+]

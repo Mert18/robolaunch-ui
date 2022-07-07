@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "name": "Mert Uygur",
+    "organization": "1",
+    "role": "Operator",
+    "email": "mertuygur02@gmail.com"
+  },
+  {
+    "id": "2",
+    "name": "Gokhan Gunduz",
+    "organization": "2",
+    "role": "Viewer",
+    "email": "gokhangunduz@gmail.com"
+  }
+]

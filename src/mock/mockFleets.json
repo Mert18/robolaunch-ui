@@ -1,0 +1,18 @@
+[
+  {
+    "fleetName": "brian",
+    "cluster": "cl-34"
+  },
+  {
+    "fleetName": "kaggle",
+    "cluster": "cl-16"
+  },
+  {
+    "fleetName": "flair",
+    "cluster": "cl-23"
+  },
+  {
+    "fleetName": "huyen",
+    "cluster": "cl-72"
+  }
+]

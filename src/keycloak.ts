@@ -1,21 +1,19 @@
-import Keycloak from 'keycloak-js'
-import { Env } from './constants'
+import EnvVariables from './constants/EnvVariables';
 
 type KeycloakConfig = {
-  realm: string
-  url: string
-  clientId: string
-}
+  realm: string;
+  url: string;
+  clientId: string;
+  publicClient: boolean;
+  sslRequired: string;
+};
 
-const keycloakCfg: KeycloakConfig = {
-  realm: Env.KEYCLOAK_REALM as string,
-  url: Env.KEYCLOAK_URL as string,
-  clientId: Env.KEYCLOAK_CLIENT_ID as string,
-}
-// Setup Keycloak instance as needed
-// Pass initialization options as required or leave blank to load from 'keycloak.json'
-//
-// @ts-ignore
-const keycloak = new Keycloak(keycloakCfg)
+const keycloakJson: KeycloakConfig = {
+  realm: EnvVariables.KEYCLOAK_REALM as string,
+  url: EnvVariables.KEYCLOAK_URL as string,
+  clientId: EnvVariables.KEYCLOAK_CLIENT_ID as string,
+  publicClient: true,
+  sslRequired: 'external',
+};
 
-export default keycloak
+export default keycloakJson;
